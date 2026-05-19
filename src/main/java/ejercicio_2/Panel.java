@@ -1,28 +1,11 @@
 package ejercicio_2;
 
-import javax.swing.*;
 
-public class Panel extends JFrame {
+public interface Panel {
 
-    public static void panel() {
+    void dibujarCirculo(int x, int y, int width, int heigth);
 
-        JFrame frame = new JFrame("Mi Ventana");
-        frame.setSize(400, 300);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLayout(null);
+    void dibujarLinea(int x1, int y1, int x2, int y2);
 
-        JButton btnCirculo= new JButton("Dibujar un circulo");
-        JButton btnTexto = new JButton("Dibujar un texto");
-        JButton btnLinea = new JButton("Dibujar una linea");
-
-        btnCirculo.setBounds(100, 100, 150, 40);
-        btnTexto.setBounds(100, 100, 150, 40);
-        btnLinea.setBounds(100, 100, 150, 40);
-
-        frame.add(btnCirculo);
-        frame.add(btnTexto);
-        frame.add(btnLinea);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-    }
+    void dibujarTexto(String texto, int x, int y);
 }

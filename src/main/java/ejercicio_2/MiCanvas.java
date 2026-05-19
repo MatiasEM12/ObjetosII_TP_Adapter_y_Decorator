@@ -19,8 +19,9 @@ class MiCanvas extends JPanel {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
 
+        Panel panel = new AdapterGraphics2D(g2d);
         for (Figura figura : figuras) {
-            figura.dibujar(g2d);
+            figura.dibujar(panel);
         }
     }
 }

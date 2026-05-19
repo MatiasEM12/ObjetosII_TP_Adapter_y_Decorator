@@ -13,10 +13,9 @@ class Circulo implements Figura {
     }
 
     @Override
-    public void dibujar(Graphics2D g2d) {
-        g2d.drawOval(coordenada.x() - radio,
-                coordenada.y() - radio,
-                radio * 2,
-                radio * 2);
+    public void dibujar(Panel panel) {
+
+        panel.dibujarCirculo(coordenada.x()-radio, coordenada.y()-radio, radio*2,radio*2);
+
     }
 }
