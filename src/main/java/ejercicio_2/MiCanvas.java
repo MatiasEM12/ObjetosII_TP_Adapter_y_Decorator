@@ -3,10 +3,10 @@ package ejercicio_2;
 import javax.swing.*;
 import java.awt.*;
 
-class Canvas extends JPanel {
+class MiCanvas extends JPanel {
     private java.util.List<Figura> figuras;
 
-    public Canvas() {
+    public MiCanvas() {
         figuras = new java.util.ArrayList<>();
     }
 
