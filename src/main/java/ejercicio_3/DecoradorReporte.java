@@ -7,6 +7,7 @@ public abstract class DecoradorReporte implements Report {
     protected Report reporte;
 
     public DecoradorReporte(Report reporte) {
+
         this.reporte = reporte;
     }
 

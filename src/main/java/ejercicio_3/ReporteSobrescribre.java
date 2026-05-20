@@ -5,6 +5,7 @@ import java.io.File;
 public class ReporteSobrescribre extends DecoradorReporte {
 
     public ReporteSobrescribre(Report reporte) {
+
         super(reporte);
     }
 
