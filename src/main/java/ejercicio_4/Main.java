@@ -10,20 +10,20 @@ public class Main {
 
         System.out.println( lineSeparator() +"Combo Simple" + lineSeparator());
 
-        System.out.println("Precio: " + combo.precio());
-        System.out.println("Descripción: " + combo.descripcion());
+       // System.out.println("Precio: " + combo.precio());
+       // System.out.println("Descripción: " + combo.descripcion());
 
-        Combo comboExtra = new ComboExtra(combo).agregarCarne();
+        var comboExtra = new ComboExtra(combo).agregarCarne();
         System.out.println("Precio con carne extra: " + comboExtra.precio());
         System.out.println("Descripción con carne extra: " + comboExtra.descripcion());
 
 
         System.out.println( lineSeparator() + "Combo Familiar" + lineSeparator());
 
-        System.out.println("Precio: " + combo2.precio());
-        System.out.println("Descripción: " + combo2.descripcion());
+      //  System.out.println("Precio: " + combo2.precio());
+      //  System.out.println("Descripción: " + combo2.descripcion());
 
-        Combo comboExtra2 = new ComboExtra(combo2).agregarQueso().agregarQueso();
+        var comboExtra2 = new ComboExtra(combo2).agregarQueso().agregarQueso();
         System.out.println("Precio con queso extra: " + comboExtra2.precio());
         System.out.println("Descripción con queso extra: " + comboExtra2.descripcion());
     }
