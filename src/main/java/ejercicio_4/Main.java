@@ -20,10 +20,11 @@ public class Main {
 
         System.out.println( lineSeparator());
 
-        var combo4= new ComboExtra(combo).conExtraCarne().ConExtraQueso().ConExtraTomate();
+        ComboFamiliar comboFamiliar = new  ComboFamiliar(200.0, "Combo Familiar: 2 hamburguesas, papas y gaseosa");
+        var combo4= new BuilderCombo(comboFamiliar).conExtraCarne().ConExtraTomate().build();
+       //var combo4= new ComboExtra(combo).conExtraCarne().ConExtraQueso().ConExtraTomate();
         System.out.println(combo4.precio());
         System.out.println(combo4.descripcion());
-
 
     }
 }

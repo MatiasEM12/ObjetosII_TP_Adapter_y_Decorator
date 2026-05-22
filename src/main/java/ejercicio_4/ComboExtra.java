@@ -20,24 +20,6 @@ public  class ComboExtra implements Combo {
         return combo.descripcion() + descripcionAdicional;
     }
 
-    public ComboExtra ConExtraTomate(){
-
-        return new ExtraTomate(this);
-    }
-
-    public ComboExtra  ConExtraQueso(){
-        return new ExtraQueso(this);
-    }
-
-    public ComboExtra  conExtraCarne(){
-        return new ExtraCarne(this);
-    }
-
-  public ComboExtra  conExtraPapa(){
-        return new ExtraPapa(this);
-  }
-
-
 
 
 
