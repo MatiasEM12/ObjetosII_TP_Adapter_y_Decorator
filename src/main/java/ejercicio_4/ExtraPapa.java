@@ -7,11 +7,9 @@ public class ExtraPapa extends ComboExtra{
 
     public ExtraPapa(Combo combo) {
         super(combo);
+        this.precioAdicional=PRECIO_EXTRA_PAPA;
+        this.descripcionAdicional=DESCRIPCION_EXTRA_PAPA;
     }
 
-    public ComboExtra agregarPapa(){
-        sumarleAdicional(PRECIO_EXTRA_PAPA);
-        sumarleDescripcion(DESCRIPCION_EXTRA_PAPA);
-        return this;
-    }
+
 }

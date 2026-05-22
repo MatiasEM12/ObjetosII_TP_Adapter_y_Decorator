@@ -1,8 +1,10 @@
 package ejercicio_4;
 
-public class ComboExtra implements Combo {
+public  class ComboExtra implements Combo {
 
-    private Combo combo;
+    protected Combo combo;
+    protected Double precioAdicional = 0.0;
+    protected String descripcionAdicional = "";
 
     public ComboExtra(Combo combo) {
         this.combo = combo;
@@ -10,32 +12,33 @@ public class ComboExtra implements Combo {
 
     @Override
     public Double precio() {
-        return combo.precio();
+        return combo.precio() + precioAdicional;
     }
 
     @Override
     public String descripcion() {
-        return combo.descripcion();
+        return combo.descripcion() + descripcionAdicional;
     }
 
-    @Override
-    public void sumarleAdicional(Double adicional) {
-        combo.sumarleAdicional(adicional);
+    public ComboExtra ConExtraTomate(){
+
+        return new ExtraTomate(this);
     }
 
-    @Override
-    public void sumarleDescripcion(String descripcion) {
-        combo.sumarleDescripcion(descripcion);
+    public ComboExtra  ConExtraQueso(){
+        return new ExtraQueso(this);
     }
 
-    public ComboExtra agregarCarne(){
-        new ExtraCarne(this).agregarCarne();
-        return this;
-
+    public ComboExtra  conExtraCarne(){
+        return new ExtraCarne(this);
     }
 
-    public ComboExtra agregarQueso(){
-        new ExtraQueso(this).agregarQueso();
-        return this;
-    }
+  public ComboExtra  conExtraPapa(){
+        return new ExtraPapa(this);
+  }
+
+
+
+
+
 }

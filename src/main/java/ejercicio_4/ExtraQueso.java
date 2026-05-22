@@ -7,11 +7,8 @@ public class ExtraQueso extends ComboExtra {
 
     public ExtraQueso(Combo combo) {
         super(combo);
+        this.precioAdicional=PRECIO_EXTRA_QUESO;
+        this.descripcionAdicional=DESCRIPCION_EXTRA_QUESO;
     }
 
-    public ComboExtra agregarQueso(){
-        sumarleAdicional(PRECIO_EXTRA_QUESO);
-        sumarleDescripcion(DESCRIPCION_EXTRA_QUESO);
-        return this;
-    }
 }

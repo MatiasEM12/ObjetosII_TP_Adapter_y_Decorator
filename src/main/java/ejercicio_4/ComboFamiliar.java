@@ -20,15 +20,6 @@ public class ComboFamiliar implements Combo {
         return descripcion;
     }
 
-    @Override
-    public void sumarleAdicional(Double adicional) {
-        this.precio += adicional;
-    }
-
-    @Override
-    public void sumarleDescripcion(String descripcion) {
-        this.descripcion += " "+descripcion;
-    }
 
 
 }

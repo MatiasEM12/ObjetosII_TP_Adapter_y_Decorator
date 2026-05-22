@@ -7,11 +7,9 @@ public class ExtraTomate extends ComboExtra{
 
     public ExtraTomate(Combo combo) {
         super(combo);
+        this.precioAdicional=PRECIO_EXTRA_TOMATE;
+        this.descripcionAdicional=DESCRIPCION_EXTRA_TOMATE;
     }
 
-    public ComboExtra agregarTomate(){
-        sumarleAdicional(PRECIO_EXTRA_TOMATE);
-        sumarleDescripcion(DESCRIPCION_EXTRA_TOMATE);
-        return this;
-    }
+
 }

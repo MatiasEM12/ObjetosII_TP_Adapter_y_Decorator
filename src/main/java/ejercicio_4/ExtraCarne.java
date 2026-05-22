@@ -6,11 +6,9 @@ public class ExtraCarne extends ComboExtra {
     public static final String DESCRIPCION_EXTRA_CARNE = ", con carne extra ";
     public ExtraCarne(Combo combo) {
         super(combo);
+        this.precioAdicional=PRECIO_EXTRA_CARNE;
+        this.descripcionAdicional=DESCRIPCION_EXTRA_CARNE;
     }
 
-    public ComboExtra agregarCarne(){
-        sumarleAdicional(PRECIO_EXTRA_CARNE);
-        sumarleDescripcion(DESCRIPCION_EXTRA_CARNE);
-        return this;
-    }
+
 }

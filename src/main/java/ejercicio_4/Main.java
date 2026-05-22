@@ -6,25 +6,24 @@ public class Main {
 
     public static void main(String[] args) {
         Combo combo = new ComboSimple(100.0, "Combo Simple:  hamburguesa");
-        Combo combo2 = new ComboFamiliar(150.0, "Combo familiar:  pizza");
+
 
         System.out.println( lineSeparator() +"Combo Simple" + lineSeparator());
-
-       // System.out.println("Precio: " + combo.precio());
-       // System.out.println("Descripción: " + combo.descripcion());
-
-        var comboExtra = new ComboExtra(combo).agregarCarne();
-        System.out.println("Precio con carne extra: " + comboExtra.precio());
-        System.out.println("Descripción con carne extra: " + comboExtra.descripcion());
+        var comboFinal= new ExtraTomate(new ExtraQueso(new ComboSimple(100.0, "Combo Simple:  hamburguesa")));
+        System.out.println(comboFinal.precio());
+        System.out.println(comboFinal.descripcion());
 
 
-        System.out.println( lineSeparator() + "Combo Familiar" + lineSeparator());
+        var combo3 = new ExtraTomate(new ExtraQueso(new ComboSimple(10d, "bkaaaa")));
+        System.out.println(combo3.precio());
+        System.out.println(combo3.descripcion());
 
-      //  System.out.println("Precio: " + combo2.precio());
-      //  System.out.println("Descripción: " + combo2.descripcion());
+        System.out.println( lineSeparator());
 
-        var comboExtra2 = new ComboExtra(combo2).agregarQueso().agregarQueso();
-        System.out.println("Precio con queso extra: " + comboExtra2.precio());
-        System.out.println("Descripción con queso extra: " + comboExtra2.descripcion());
+        var combo4= new ComboExtra(combo).conExtraCarne().ConExtraQueso().ConExtraTomate();
+        System.out.println(combo4.precio());
+        System.out.println(combo4.descripcion());
+
+
     }
 }
