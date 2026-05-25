@@ -1,6 +1,6 @@
 package ejercicio_4;
 
-public  class ComboExtra implements Combo {
+public abstract class ComboExtra implements Combo {
 
     protected Combo combo;
     protected Double precioAdicional = 0.0;
