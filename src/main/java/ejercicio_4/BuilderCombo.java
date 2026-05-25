@@ -6,9 +6,28 @@ public class BuilderCombo {
 
     private Combo combo;
 
-    public  BuilderCombo(ComboFamiliar combo){
-        this.combo = combo;
+    public  BuilderCombo(){
+
     }
+
+    public BuilderCombo BuilderComboDe(ComboFamiliar combo){
+        validarComboIniciado(); //para no buildear un comboX y sobre este buildearle otro comboX
+        this.combo= combo;
+        return this;
+    }
+
+    public BuilderCombo BuilderComboDe(ComboEspecial combo){
+       validarComboIniciado();
+       this.combo= combo;
+       return this;
+    }
+
+    public BuilderCombo BuilderComboDe(ComboSimple combo){
+        validarComboIniciado();
+        this.combo= combo;
+        return this;
+    }
+
 
     public BuilderCombo ConExtraTomate(){
         this.combo= new ExtraTomate(this.combo);
@@ -30,8 +49,13 @@ public class BuilderCombo {
     }
 
     public Combo build(){
-        return this.combo;
+        Combo comboConstruido = this.combo;
+        this.combo = null; //se reinicia el builder para poder construir otro combo
+        return comboConstruido;
     }
 
+    private void validarComboIniciado(){
+        if(this.combo!=null) throw new IllegalStateException("El combo ya fue iniciado");
+    }
 
 }
