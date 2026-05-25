@@ -6,8 +6,8 @@ public class AdapterMotorElectrico implements Motor {
 
     private MotorElectrico motorElectrico;
 
-    public AdapterMotorElectrico(MotorElectrico motorElectrico) {
-        this.motorElectrico = motorElectrico;
+    public AdapterMotorElectrico() {
+        this.motorElectrico = new MotorElectrico();
     }
 
     @Override
